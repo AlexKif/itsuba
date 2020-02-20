@@ -13,7 +13,10 @@ feedbackForm.onsubmit = (event) => {
     };
     feedback(data)
         .then(() => alert("ок"))
-        .catch(() => alert("не ок"))
+        .catch(() => alert("не ок"));
+
+    nameField.value = '';
+    emailField.value = '';
 };
 
 

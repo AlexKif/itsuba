@@ -8,6 +8,6 @@ export const feedback = async ({name, email}) => {
         },
         body: JSON.stringify({fullName: name, email: email})
     };
-    const response = await fetch(`${baseUrl}/posts`, init);
+    const response = await fetch(`${baseUrl}/users`, init);
     return response.json();
 };
