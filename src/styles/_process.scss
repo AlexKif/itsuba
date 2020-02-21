@@ -1,0 +1,159 @@
+.process {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 10px 50px;
+  &__items {
+    padding: 40px 0 40px 40px;
+  }
+  &__item {
+    color: #646464;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    position: relative;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: "";
+      display: table;
+      width: 5px;
+      height: 5px;
+      background-color: #ef4444;
+      position: absolute;
+      left: -10px;
+      top: 3px;
+    }
+  }
+  &__sub-headline {
+    max-width: 335px;
+  }
+  &__counter {
+    position: absolute;
+    top: 3px;
+    left: -44px;
+    transform: rotate(-90deg);
+    color: rgba(90, 90, 90, .2);
+    font-weight: 700;
+  }
+  &__slides {
+    display: flex;
+    @media screen and (min-width: 425px){
+      justify-content: center;
+    }
+    @media screen and (min-width: 850px){
+      justify-content: flex-end;
+      padding-right: 77px;
+    }
+  }
+}
+
+.slider {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.siema {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  &-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    transition: .2s;
+    opacity: .5;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.prev {
+  left: 5px;
+}
+
+.next {
+  right: 5px;
+}
+
+@media screen and (min-width: 625px) {
+  .process {
+    padding: 25px 0 50px;
+    &__description {
+      padding-left: 77px;
+    }
+    &__item {
+      font-size: 16px;
+      &:before {
+        left: -10px;
+        top: 4px;
+      }
+    }
+    &__items {
+      padding: 50px 0 50px 40px;
+    }
+    &__counter {
+      top: 5px;
+      left: -48px;
+    }
+  }
+  .slider {
+    max-width: 575px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .process {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 62px 0 83px;
+    &__slides {
+      padding-right: 0;
+      align-items: center;
+    }
+    &__description {
+      padding-left: 138px;
+    }
+    &__item {
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      margin: 0;
+      &:before {
+        left: -11px;
+        top: 5px;
+      }
+    }
+    &__counter {
+      top: 6px;
+      left: -66px;
+      font-size: 18px;
+    }
+    &__items {
+      min-height: 303px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 98px 0 0 18px;
+    }
+  }
+  .slider {
+    height: min-content;
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+
